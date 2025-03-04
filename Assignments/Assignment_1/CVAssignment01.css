@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f7fa;
+}
+
+.resume-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mid-container {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+
+.head {
+    color: white; /* Change text color to white for better contrast */
+    padding: 20px; /* Add padding for spacing */
+    text-align: center; /* Center-align the text */
+    border-radius: 8px 8px 0 0; /* Rounded corners at the top */
+    margin-bottom: 20px; /* Add margin at the bottom for spacing */
+}
+
+h2 {
+    color: black;
+}
+
+.head h1 {
+    color: black;
+    font-size: 35px;
+    margin-bottom: -20px;
+}
+
+h2 {
+    font-size: 18px;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.head p {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+ul {
+    margin: 5px 0;
+    padding-left: 20px;
+}
+
+.contact-and-profile {
+    display: flex;
+    margin-top: -30px;
+}
+
+.contact-info {
+    margin-bottom: 15px;
+    width: 400px;
+    margin-right: 10px;
+}
+
+.contact-info p {
+    margin: 3px 0;
+}
+
+.profile-info {
+    width: 400px;
+    margin-left: 10px;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-list li {
+    margin-bottom: 5px;
+}
+
+.experience-item, .education-item, .project-item {
+    margin-bottom: 15px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.item-title {
+    font-weight: bold;
+}
+
+.item-date {
+    color: black;
+}
+
+.item-subtitle {
+    font-style: italic;
+    margin-bottom: 5px;
+}
