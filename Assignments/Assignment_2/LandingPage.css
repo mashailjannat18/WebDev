@@ -52,7 +52,7 @@ body {
 }
 
 .menu-items p {
-    font-size: 15px;
+    font-size: 14px;
     margin: 10px 0;
     transition: all 0.2s;
 }
@@ -78,8 +78,8 @@ body {
 }
 
 .content1-p {
-    width: 168px;
-    font-size: 17px;
+    width: 188px;
+    font-size: 14px;
     position: sticky;
     margin-top: -53px;
     margin-left: 25px;
@@ -113,8 +113,8 @@ body {
 }
 
 .content2-p1 {
-    width: 115px;
-    font-size: 17px;
+    width: 125px;
+    font-size: 14px;
     position: sticky;
     margin-top: -55px;
     margin-left: 25px;
@@ -125,8 +125,8 @@ body {
 }
 
 .content2-p2 {
-    width: 85px;
-    font-size: 17px;
+    width: 93px;
+    font-size: 14px;
     position: sticky;
     margin-top: -55px;
     margin-left: 25px;
@@ -151,8 +151,8 @@ body {
 }
 
 .content3-p1 {
-    width: 42px;
-    font-size: 17px;
+    width: 45px;
+    font-size: 14px;
     position: sticky;
     margin-top: -55px;
     margin-left: 255px;
@@ -166,11 +166,12 @@ body {
     color: #6a696c;
     margin-top: 55px;
     margin-left: 226px;
+    font-size: 14px;
 }
 
 .content4-p1 {
-    width: 155px;
-    font-size: 17px;
+    width: 170px;
+    font-size: 14px;
     position: sticky;
     margin-top: -55px;
     margin-left: 25px;
@@ -182,8 +183,8 @@ body {
 }
 
 .content4-p2 {
-    width: 126px;
-    font-size: 17px;
+    width: 138px;
+    font-size: 14px;
     position: sticky;
     margin-top: -55px;
     margin-left: 25px;
@@ -204,7 +205,7 @@ body {
 
 .column-1, .column-2, .column-3 {
     color: #6a696c;
-    font-size: 13px;
+    font-size: 11px;
     padding: 10px 0px 10px 10px;
 }
 
