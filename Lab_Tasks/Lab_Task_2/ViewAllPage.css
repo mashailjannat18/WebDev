@@ -1,0 +1,63 @@
+body {
+    font-family: 'Gill Sans MT', 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px 43px 40px 53px;
+    margin: 0;
+}
+
+.head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 10px 0 25px 0px;
+}
+
+.head p {
+    color: #6a696c;
+    font-size: 13.5px;
+    margin: 0;
+    transition: all 0.2s;
+}
+
+.bag-icon {
+    color: #6a696c;
+    margin-bottom: -2.5px;
+    transition: all 0.2s;
+}
+
+.mid-container {
+    display: flex;
+    height: calc(478vh - 60px);
+}
+
+.side-menu {
+    width: 300px;
+    position: relative;
+}
+
+.side-menu .heading-1, .side-menu p {
+    color: #6a696c;
+}
+
+.heading-1 {
+    font-size: 35px;
+    margin-top: -10px;
+    padding-bottom: 45px;
+}
+
+.menu-items {
+    position: sticky;
+    top: 0;
+    padding-top: 45px;
+}
+
+.menu-items p {
+    font-size: 14px;
+    margin: 10px 0;
+    transition: all 0.2s;
+}
+
+.space {
+    height: 1px;
+    padding: 0;
+}
