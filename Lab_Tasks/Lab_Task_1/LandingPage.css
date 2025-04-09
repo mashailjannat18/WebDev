@@ -10,6 +10,11 @@ body {
     transition: all 0.2s;
 }
 
+.mid-container {
+    display: flex;
+    height: calc(478vh - 60px);
+}
+
 .bag-icon {
     color: #6a696c;
     margin-bottom: -2.5px;
