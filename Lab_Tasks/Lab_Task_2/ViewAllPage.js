@@ -1,11 +1,9 @@
-// Sample items for random selection
 const items = [
     { img: '8.webp', name: 'Sample Item 1', size: 'M', qty: 1, price: 120 },
     { img: '9.webp', name: 'Sample Item 2', size: 'S', qty: 1, price: 150 },
     { img: '10.webp', name: 'Sample Item 3', size: 'L', qty: 1, price: 100 }
 ];
 
-// Function to populate cart with a random item
 function populateCart() {
     const cartContent = document.querySelector('.cart-content');
     const randomItem = items[Math.floor(Math.random() * items.length)];
@@ -28,7 +26,6 @@ function populateCart() {
         </div>
     `;
 
-    // Add remove functionality
     document.querySelector('.remove-item-btn').addEventListener('click', () => {
         cartContent.innerHTML = `
             <h2>Your Bag</h2>
@@ -41,16 +38,14 @@ function populateCart() {
     });
 }
 
-// Add event listeners to "Add to Cart" buttons
 document.querySelectorAll('.add-to-cart-btn').forEach(button => {
     button.addEventListener('click', () => {
         const cartPanel = document.getElementById('cartPanel');
         cartPanel.classList.add('open');
-        populateCart(); // Populate with a random item
+        populateCart();
     });
 });
 
-// Function to close the cart panel
 function closeCart() {
     document.getElementById('cartPanel').classList.remove('open');
 }

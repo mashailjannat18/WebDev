@@ -1,0 +1,207 @@
+body {
+    font-family: 'Gill Sans MT', 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px 43px 40px 53px;
+    margin: 0;
+}
+
+.head p, .side-menu p, .column-1 p, .column-2 p, .column-3 p, .footer-text p {
+    color: #6a696c;
+    margin: 0;
+    transition: all 0.2s;
+}
+
+.mid-container {
+    display: flex;
+    height: calc(478vh - 60px);
+}
+
+.bag-icon {
+    color: #6a696c;
+    margin-bottom: -2.5px;
+    transition: all 0.2s;
+}
+
+.heading-1 {
+    font-size: 35px;
+    margin-top: -10px;
+    padding-bottom: 45px;
+}
+
+.menu-items p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.space {
+    height: 1px;
+    padding: 0;
+}
+
+.video-1 {
+    width: 880px; 
+    height: 485px; 
+    object-fit: fill;
+    margin-top: -3px;
+    margin-right: 3px;
+}
+
+.content1-p {
+    width: 188px;
+    font-size: 14px;
+    position: sticky;
+    margin-top: -53px;
+    margin-left: 25px;
+    padding-bottom: 5px;
+    color: white;
+    border-bottom: solid 2px white;
+    transition: all 0.2s;
+}
+
+#2nd-p {
+    margin-bottom: 100px;
+}
+
+.content2-img1, .content2-img2, .content4-img1, .content4-img2 {
+    width: 432.5px;
+    height: 620px;
+}
+
+.content2-p1 {
+    width: 125px;
+    font-size: 14px;
+    position: sticky;
+    margin-top: -55px;
+    margin-left: 25px;
+    padding-bottom: 5px;
+    color: white;
+    border-bottom: solid 2px white;
+    transition: all 0.2s;
+}
+
+.content2-p2 {
+    width: 93px;
+    font-size: 14px;
+    position: sticky;
+    margin-top: -55px;
+    margin-left: 25px;
+    padding-bottom: 5px;
+    color: white;
+    border-bottom: solid 2px white;
+    transition: all 0.2s;
+}
+
+.content3-img {
+    width: 432.5px;
+    height: 620px;
+    display: block;
+    margin: 0 auto;
+}
+
+.content3-p1 {
+    width: 45px;
+    font-size: 14px;
+    position: sticky;
+    margin-top: -55px;
+    margin-left: 255px;
+    padding-bottom: 5px;
+    color: white;
+    border-bottom: solid 2px white;
+    transition: all 0.2s;
+}
+
+.content3-p2 {
+    margin-top: 55px;
+    margin-left: 226px;
+    font-size: 14px;
+}
+
+.content4-p1 {
+    width: 170px;
+    font-size: 14px;
+    position: sticky;
+    margin-top: -55px;
+    margin-left: 25px;
+    margin-bottom: 180px;
+    padding-bottom: 5px;
+    color: white;
+    border-bottom: solid 2px white;
+    transition: all 0.2s;
+}
+
+.content4-p2 {
+    width: 138px;
+    font-size: 14px;
+    position: sticky;
+    margin-top: -55px;
+    margin-left: 25px;
+    padding-bottom: 5px;
+    color: white;
+    border-bottom: solid 2px white;
+    transition: all 0.2s;
+}
+
+.column-1, .column-2, .column-3 {
+    font-size: 11px;
+    padding: 10px 0px 10px 10px;
+}
+
+.column3-p {
+    margin-top: 40px;
+    text-align: right;
+}
+
+#column-3-pid {
+    width: 220px;
+    font-size: 14px;
+}
+
+.column-3-bar {
+    background-color: #6a696c;
+    padding-bottom: 0.5px;
+    margin-bottom: 25px;
+}
+
+.footer-text {
+    font-size: 12px;
+    width: 880px;
+    text-align: right;   
+}
+
+.empty-space {
+    height: 72px;
+    width: 100%;
+}
+
+.message-icon {
+    position: fixed;
+    bottom: 25px;
+    right: 11px;
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.2s ease;
+}
+
+.video-1:hover, .content2-img1:hover, .content2-img2:hover, .content3-img:hover, .content4-img1:hover, .content4-img2:hover {
+    cursor: pointer;
+}
+
+.head p:hover, .menu-items p:hover, .column-1 p:hover, .column-2 p:hover, .hover-p:hover, .column3-p:hover, .column-3-social p:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.content1-p:hover, .content2-p1:hover, .content2-p2:hover, .content3-p1:hover, .content4-p1:hover, .content4-p2:hover {
+    color: black;
+    border-bottom: solid 2px black;
+    cursor: pointer;
+}
+
+.bag-icon:hover {
+    cursor: pointer;
+}
+
+.message-icon:hover {
+    cursor: pointer;
+}
