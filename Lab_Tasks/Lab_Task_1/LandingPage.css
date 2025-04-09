@@ -4,17 +4,8 @@ body {
     margin: 0;
 }
 
-.head {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    gap: 30px;
-    padding: 10px 0 25px 0px;
-}
-
-.head p {
+.head p, .side-menu p, .column-1 p, .column-2 p, .column-3 p, .footer-text p {
     color: #6a696c;
-    font-size: 13.5px;
     margin: 0;
     transition: all 0.2s;
 }
@@ -25,48 +16,20 @@ body {
     transition: all 0.2s;
 }
 
-.mid-container {
-    display: flex;
-    height: calc(478vh - 60px);
-}
-
-.side-menu {
-    width: 300px;
-    position: relative;
-}
-
-.side-menu .heading-1, .side-menu p {
-    color: #6a696c;
-}
-
 .heading-1 {
     font-size: 35px;
     margin-top: -10px;
     padding-bottom: 45px;
 }
 
-.menu-items {
-    position: sticky;
-    top: 0;
-    padding-top: 45px;
-}
-
 .menu-items p {
     font-size: 14px;
     margin: 10px 0;
-    transition: all 0.2s;
 }
 
 .space {
     height: 1px;
     padding: 0;
-}
-
-.content {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
 }
 
 .video-1 {
@@ -89,22 +52,8 @@ body {
     transition: all 0.2s;
 }
 
-.content-1 {
-    margin-top: 60px;
-    margin-bottom: 100px;
-}
-
-.content-1 p {
-    color: #6a696c;
-}
-
 #2nd-p {
     margin-bottom: 100px;
-}
-
-.content-2, .content-4 {
-    display: flex;
-    gap: 20px;
 }
 
 .content2-img1, .content2-img2, .content4-img1, .content4-img2 {
@@ -136,13 +85,6 @@ body {
     transition: all 0.2s;
 }
 
-.content-3 {
-    justify-content: center; 
-    align-items: center;
-    margin-top: 90px; 
-    margin-bottom: 90px; 
-}
-
 .content3-img {
     width: 432.5px;
     height: 620px;
@@ -163,7 +105,6 @@ body {
 }
 
 .content3-p2 {
-    color: #6a696c;
     margin-top: 55px;
     margin-left: 226px;
     font-size: 14px;
@@ -194,33 +135,14 @@ body {
     transition: all 0.2s;
 }
 
-.footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-left: -10px;
-    width: 880px;
-    margin-bottom: 50px;
-}
-
 .column-1, .column-2, .column-3 {
-    color: #6a696c;
     font-size: 11px;
     padding: 10px 0px 10px 10px;
-}
-
-.column-1 p, .column-2 p {
-    transition: all 0.2s;
 }
 
 .column3-p {
     margin-top: 40px;
     text-align: right;
-    transition: all 0.2s;
-}
-
-.hover-p {
-    transition: all 0.2s;
 }
 
 #column-3-pid {
@@ -234,21 +156,10 @@ body {
     margin-bottom: 25px;
 }
 
-.column-3-social {
-    display: flex;
-    gap: 30px;
-}
-
-.column-3-social p {
-    color: #6a696c;
-    transition: all 0.2s;
-}
-
 .footer-text {
     font-size: 12px;
     width: 880px;
-    text-align: right;
-    color: #6a696c;    
+    text-align: right;   
 }
 
 .empty-space {
