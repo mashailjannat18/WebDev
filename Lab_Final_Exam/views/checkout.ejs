@@ -1,0 +1,135 @@
+<div class="content-container">
+  <% if (!user) { %>
+    <div class="alert error">
+      Please <a href="/auth/signin">sign in</a> to proceed with checkout.
+    </div>
+  <% } else { %>
+    <div class="checkout-container">
+      <% if (typeof message !== 'undefined' && message) { %>
+        <div class="alert <%= message.includes('Error') ? 'error' : 'success' %>">
+          <%= message %>
+        </div>
+      <% } %>
+      <div class="checkout-header">
+        <p>M A R G A R E T<br>H O W E L L</p>
+      </div>
+      <div class="line"></div>
+      <div class="checkout-content">
+        <div class="checkout-form">
+          <form id="checkoutForm" action="/checkout" method="POST" novalidate>
+            <div class="form-section">
+              <h2>ACCOUNT</h2>
+              <p class="account-email"><%= user.email %></p>
+              <label>
+                <input type="checkbox" name="marketing">
+                By ticking you consent to receiving marketing materials from Margaret Howell Ltd
+              </label>
+            </div>
+
+            <div class="form-section">
+              <h2>DELIVERY</h2>
+              <div class="form-group">
+                <label for="country">COUNTRY/REGION</label>
+                <select id="country" name="country" required>
+                  <option value="Pakistan">Pakistan</option>
+                </select>
+                <span class="error" id="countryError"></span>
+              </div>
+              <div class="form-group inline">
+                <div>
+                  <label for="firstName">FIRST NAME</label>
+                  <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z\s]+" value="<%= user.firstName %>" placeholder="Mashail">
+                  <span class="error" id="firstNameError"></span>
+                </div>
+                <div>
+                  <label for="lastName">LAST NAME</label>
+                  <input type="text" id="lastName" name="lastName" required pattern="[A-Za-z\s]+" placeholder="Jannat">
+                  <span class="error" id="lastNameError"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="company">COMPANY (OPTIONAL)</label>
+                <input type="text" id="company" name="company" placeholder="">
+                <span class="error" id="companyError"></span>
+              </div>
+              <div class="form-group">
+                <label for="address">ADDRESS</label>
+                <input type="text" id="address" name="address" required placeholder="">
+                <span class="error" id="addressError"></span>
+              </div>
+              <div class="form-group">
+                <label for="apartment">APARTMENT, SUITE, ETC (OPTIONAL)</label>
+                <input type="text" id="apartment" name="apartment" placeholder="">
+                <span class="error" id="apartmentError"></span>
+              </div>
+              <div class="form-group inline">
+                <div>
+                  <label for="city">CITY</label>
+                  <input type="text" id="city" name="city" required placeholder="">
+                  <span class="error" id="cityError"></span>
+                </div>
+                <div>
+                  <label for="postalCode">POSTAL CODE (OPTIONAL)</label>
+                  <input type="text" id="postalCode" name="postalCode" placeholder="">
+                  <span class="error" id="postalCodeError"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="phone">PHONE</label>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,15}" minlength="10" maxlength="15" placeholder="">
+                <span class="error" id="phoneError"></span>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h2>SHIPPING METHOD</h2>
+              <div class="shipping-option">
+                <label>
+                  <input type="radio" name="shipping" value="express" checked>
+                  Express Courier (Air) <span>FREE</span>
+                  <p>4 to 5 business days</p>
+                  <p>Prepayment of duties and taxes supported</p>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h2>PAYMENT</h2>
+              <p>All transactions are secure and encrypted.</p>
+              <div class="payment-option">
+                <label>
+                  <input type="radio" name="payment" value="cash" checked>
+                  Pay Later with Cash
+                </label>
+              </div>
+            </div>
+
+            <button type="submit">Place Order</button>
+          </form>
+        </div>
+
+        <div class="cart-summary">
+          <% cart.forEach(item => { %>
+            <div class="cart-item">
+              <img src="<%= item.image %>" alt="<%= item.title %>">
+              <div class="cart-item-details">
+                <p><%= item.title %></p>
+                <p>Quantity: <%= item.quantity %></p>
+              </div>
+              <p class="cart-item-price">£<%= (item.price * item.quantity).toFixed(2) %></p>
+            </div>
+          <% }) %>
+          <div class="summary-details">
+            <p>Subtotal <span>£<%= totalPrice.toFixed(2) %></span></p>
+            <p>Shipping <span>FREE</span></p>
+            <p class="total">TOTAL <span>£<%= totalPrice.toFixed(2) %></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% } %>
+  <%- include('partials/footer') %>
+  <% if (user) { %>
+    <script src="/scripts/Checkout.js"></script>
+  <% } %>
+</div>

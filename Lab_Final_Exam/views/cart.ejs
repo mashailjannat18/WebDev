@@ -1,0 +1,56 @@
+<div class="content-container">
+  <h2>Your Cart</h2>
+  <% if (message) { %>
+    <div class="alert <%= message.includes('Error') ? 'error' : 'success' %>">
+      <%= message %>
+    </div>
+  <% } %>
+  <% if (cart.length === 0) { %>
+    <p>Your cart is empty.</p>
+    <a href="/products"><button>Continue Shopping</button></a>
+  <% } else { %>
+    <div class="cart-items">
+      <% cart.forEach(item => { %>
+        <div class="cart-item">
+          <img src="<%= item.image %>" alt="<%= item.title %>" class="cart-item-img">
+          <div class="cart-item-details">
+            <p class="cart-item-title"><%= item.title %></p>
+            <p>Price: £<%= item.price.toFixed(2) %></p>
+            <form action="/cart/update" method="POST" class="cart-item-form">
+              <input type="hidden" name="productId" value="<%= item.productId %>">
+              <label>Quantity:
+                <input type="number" name="quantity" value="<%= item.quantity %>" min="1" required>
+              </label>
+              <button type="submit">Update</button>
+            </form>
+            <form action="/cart/remove" method="POST">
+              <input type="hidden" name="productId" value="<%= item.productId %>">
+              <button type="submit">Remove</button>
+            </form>
+          </div>
+          <p class="cart-item-total">£<%=(item.price * item.quantity).toFixed(2) %></p>
+        </div>
+      <% }) %>
+    </div>
+    <div class="cart-summary">
+      <p>Total: <span>£<%= totalPrice.toFixed(2) %></span></p>
+      <a href="/checkout"><button>Proceed to Checkout</button></a>
+    </div>
+  <% } %>
+  <%- include('partials/footer') %>
+</div>
+<style>
+  .alert { padding: 10px; margin-bottom: 10px; border-radius: 5px; }
+  .alert.success { background-color: #dff0d8; color: #3c763d; }
+  .alert.error { background-color: #f2dede; color: #a94442; }
+  .cart-items { margin-bottom: 20px; }
+  .cart-item { display: flex; align-items: center; margin-bottom: 10px; padding: 10px; border-bottom: 1px solid #ccc; }
+  .cart-item-img { width: 80px; height: 100px; object-fit: cover; margin-right: 10px; }
+  .cart-item-details { flex: 1; }
+  .cart-item-title { font-size: 16px; color: #6a696c; }
+  .cart-item-form { display: inline-flex; gap: 5px; }
+  .cart-item-total { font-size: 14px; color: #6a696c; }
+  .cart-summary { text-align: right; }
+  .cart-summary button { padding: 10px 20px; background-color: #6a696c; color: white; border: none; cursor: pointer; }
+  .cart-summary button:hover { background-color: #000; }
+</style>

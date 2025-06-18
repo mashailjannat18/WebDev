@@ -1,0 +1,44 @@
+<div class="content-container">
+  <h2>Contact Us / Submit a Complaint</h2>
+  <% if (typeof message !== 'undefined' && message) { %>
+    <div class="alert <%= message.includes('Error') ? 'error' : 'success' %>">
+      <%= message %>
+    </div>
+  <% } %>
+  <div class="contact-form">
+    <form id="contactForm" action="/contact" method="POST">
+      <div class="form-group">
+        <label for="orderId">Order ID</label>
+        <select id="orderId" name="orderId" required>
+          <option value="">Select an order</option>
+          <% orders.forEach(order => { %>
+            <option value="<%= order._id %>"><%= order._id %></option>
+          <% }) %>
+        </select>
+        <span class="error" id="orderIdError"></span>
+      </div>
+      <div class="form-group">
+        <label for="message">Complaint Message</label>
+        <textarea id="message" name="message" required minlength="10" maxlength="500" placeholder="Describe your issue..."></textarea>
+        <span class="error" id="messageError"></span>
+      </div>
+      <button type="submit">Submit Complaint</button>
+    </form>
+  </div>
+  <h2>Your Complaints</h2>
+  <% if (complaints.length === 0) { %>
+    <p>You have no complaints.</p>
+  <% } else { %>
+    <div class="complaints-list">
+      <% complaints.forEach(complaint => { %>
+        <div class="complaint-item">
+          <p><strong>Order ID:</strong> <%= complaint.orderId._id %></p>
+          <p><strong>Date:</strong> <%= complaint.createdAt.toLocaleDateString() %></p>
+          <p><strong>Message:</strong> <%= complaint.message %></p>
+        </div>
+      <% }) %>
+    </div>
+  <% } %>
+  <%- include('partials/footer') %>
+</div>
+<script src="/scripts/Contact.js"></script>

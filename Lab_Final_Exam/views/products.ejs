@@ -1,0 +1,30 @@
+<div class="content-container">
+  <p class="content-p">FILTER</p>
+  <% if (typeof message !== 'undefined' && message) { %>
+    <div class="alert <%= message.includes('Error') ? 'error' : 'success' %>">
+      <%= message %>
+    </div>
+  <% } %>
+  <div class="content-images">
+    <% products.forEach(product => { %>
+      <div class="image-wrapper">
+        <img class="content-img" src="<%= product.image %>" alt="<%= product.name %>">
+        <div class="overlay">
+          <button class="add-to-cart-btn" data-id="<%= product._id %>">Add to Cart</button>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+  <div class="cart-panel" id="cartPanel">
+    <div class="cart-content">
+      <h2>Your Bag</h2>
+      <div id="cartItems"></div>
+      <div class="cart-summary">
+        <p>Subtotal: <span id="subtotal">£0</span></p>
+        <a href="/checkout"><button class="checkout-btn">Checkout</button></a>
+      </div>
+    </div>
+  </div>
+  <%- include('partials/footer') %>
+</div>
+<script src="/scripts/ViewAllPage.js"></script>
