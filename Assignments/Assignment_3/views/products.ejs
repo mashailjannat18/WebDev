@@ -1,0 +1,14 @@
+<div class="content-container">
+  <p class="content-p">FILTER</p>
+  <div class="content-images">
+    <% products.forEach(product => { %>
+      <div class="image-wrapper">
+        <img class="content-img" src="<%= product.image %>" alt="<%= product.name %>">
+        <div class="overlay">
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+  <%- include('partials/footer') %>
+</div>

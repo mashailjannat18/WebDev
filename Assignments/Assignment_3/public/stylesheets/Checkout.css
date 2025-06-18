@@ -1,0 +1,267 @@
+body {
+    font-family: 'Gill Sans MT', 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.checkout-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.checkout-header p {
+    font-size: 30px;
+    color: #6a696c;
+    margin: -10px 0 40px 40px;
+    line-height: 1.2;
+}
+
+.line {
+    width: 100%;
+    height: 0.2px;
+    background-color: #dedede;
+    margin-top: -25px;
+}
+
+.checkout-content {
+    display: flex;
+    gap: 40px;
+}
+
+.checkout-form {
+    flex: 2;
+}
+
+.cart-summary {
+    flex: 1;
+    padding: 20px 0;
+}
+
+.form-section {
+    margin-bottom: 30px;
+}
+
+.form-section h2 {
+    font-size: 14px;
+    color: #6a696c;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.account-email {
+    font-size: 14px;
+    color: #6a696c;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    color: #6a696c;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+}
+
+.form-group.inline {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group.inline > div {
+    flex: 1;
+}
+
+.form-group textarea {
+    height: 60px;
+    resize: none;
+}
+
+.form-group input:invalid:focus,
+.form-group select:invalid:focus,
+.form-group textarea:invalid:focus {
+    border-color: #ff0000;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.error {
+    color: #ff0000;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
+
+.shipping-option label,
+.duties-option label,
+.payment-option label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #6a696c;
+}
+
+.shipping-option p,
+.duties-option p {
+    font-size: 12px;
+    color: #6a696c;
+    margin: 5px 0 0 20px;
+}
+
+.shipping-option span {
+    float: right;
+    font-size: 14px;
+    color: #6a696c;
+}
+
+.card-icons,
+.paypal-icon {
+    margin-left: 40px;
+    display: inline-block;
+}
+
+.card-icons img,
+.paypal-icon img {
+    height: 20px;
+    margin-left: 5px;
+}
+
+.card-details {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.terms {
+    font-size: 12px;
+    color: #6a696c;
+    margin-top: 10px;
+}
+
+.terms a {
+    color: #6a696c;
+    text-decoration: underline;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #6a696c;
+    color: white;
+    border: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #000;
+}
+
+/* Cart Summary Styles */
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.cart-item-details p {
+    font-size: 12px;
+    color: #6a696c;
+    margin: 2px 0;
+}
+
+.cart-item-price {
+    font-size: 14px;
+    color: #6a696c;
+    margin-left: auto;
+}
+
+.discount-code {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.discount-code input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background-color: #f5f5f5;
+}
+
+.discount-code button {
+    padding: 8px 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.summary-details p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #6a696c;
+    margin: 5px 0;
+}
+
+.summary-details .total {
+    font-weight: bold;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+#paypal-png {
+    width: 50px;
+    height: 30px;
+    margin-bottom: -12px;
+    margin-left: -20px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+#visa-png {
+    width: 45px;
+    height: 28px;
+    margin-bottom: -12px;
+    margin-left: -20px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+#mastercard-png, #amex-png, #jcb-png {
+    width: 45px;
+    height: 28px;
+    margin-bottom: -12px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+}

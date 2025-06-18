@@ -1,0 +1,10 @@
+<div class="head">
+  <p>SEARCH</p>
+  <p>PK Rs</p>
+  <% if (user) { %>
+    <p>Welcome, <%= user.firstName %> | <a href="/auth/logout">SIGN OUT</a></p>
+  <% } else { %>
+    <a href="/auth/signin"><p>SIGN IN</p></a>
+  <% } %>
+  <span class="material-symbols-outlined bag-icon">shopping_bag</span>
+</div>
